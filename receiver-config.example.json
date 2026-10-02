@@ -1,0 +1,5 @@
+{
+  "canary_hex": "00",
+  "receipt_path": "receiver-receipts.jsonl",
+  "ports": { "tcp": 19081, "udp": 19082, "dns": 19083, "http": 19080 }
+}
