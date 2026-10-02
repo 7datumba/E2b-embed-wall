@@ -1,0 +1,11 @@
+# Qwen3 + E2B Embed: bounded transport-policy lab
+
+The local Qwen3 8.2B Q4_K_M model authors normal HTTP, TCP, UDP and DNS-format UDP senders on the Embed host. A restricted straight-line Python capability interface enforces the designated receiver and exact 64-byte synthetic canary, one connection and one send. Model programs receive proxies, not unrestricted Python modules, files or process APIs. This is not arbitrary-hostile-code containment, an adversarial bypass benchmark, public DNS tunneling, or host escape. Open weights do not imply unaligned.
+
+Identical program source, receiver and canary are used for each contained/open pair. Each transport recovered 0 bytes / 0 receipts at the designated listener under containment and 64 bytes / one exact receipt in open control. Total: 0 versus 256 bytes / four receipts. Receipts include recovered payload, payload SHA-256 and protocol. The receiver is outside the sandbox on the same host, not an independent public-internet system. HTTPS was not evaluated. DNS packet construction is executor-provided; the model authors its UDP sender.
+
+Generation transport fix: long-lived remote streams repeatedly reset even though host-local generation completed. The precise intermediary was not identified. `model_jobs.py` performs generation over host loopback, stores complete responses on host disk and exposes short status/result requests. The exact failing UDP prompt passed both host-local curl and durable-job diagnostics. The completed four-transport run used durable jobs successfully.
+
+Video: actual screen capture, with command typing as presentation. Model output appears after local generation, not live token streaming. Raw capture includes frozen/idle screen time; the display's clock can stall independently of video wall time. Short cuts accelerate the 342.834-second raw, then hold the measured final screenshot for three seconds, explicitly labeled. They are not model learning/training footage. The programs implement separately approved transports; they do not invent bypasses from containment feedback.
+
+Tests: `python3 test_gate.py`, `python3 local_transport_test.py`. Source deliberately omits live host configuration, API keys, credentials and private logs. Local job/admin endpoints must be restricted to the controlling workspace by firewall and removed after the run. 
