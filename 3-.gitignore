@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+lab-config.json
+receiver-config.json
+*.log
+*.mp4
+receiver-receipts.jsonl
+events.jsonl
+measurement.json
+measurement-partial.json
+.env
