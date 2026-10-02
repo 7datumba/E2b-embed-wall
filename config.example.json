@@ -1,0 +1,8 @@
+{
+  "keyPath": "/path/to/file/containing/E2B_API_KEY",
+  "model": "qwen3:8b",
+  "modelJobUrl": "http://HOST_RUNNING_MODEL_JOBS:19085",
+  "receiptUrl": "http://HOST_RUNNING_RECEIVER:19084",
+  "receiverHost": "HOST_RUNNING_RECEIVER",
+  "ports": { "tcp": 19081, "udp": 19082, "dns": 19083, "http": 19080 }
+}
