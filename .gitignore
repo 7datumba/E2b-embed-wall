@@ -6,6 +6,6 @@ receiver-config.json
 *.mp4
 receiver-receipts.jsonl
 events.jsonl
-measurement.json
-measurement-partial.json
+/measurement.json
+/measurement-partial.json
 .env
